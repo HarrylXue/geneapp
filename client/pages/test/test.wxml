@@ -1,0 +1,19 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+
+    <view>this is test page</view>
+    <navigator url="../test/test" open-type="navigate" class="test-text">
+        <text>报告编号：</text>
+		<text>报告类别：</text>
+    </navigator>
+
+	<navigator>
+		<image></image>
+		<text>最新研究成果</text> <text>更新状态</text>
+	</navigator>
+
+	<text>健康福利</text>
+	<navigator>
+		<text>专家咨询门诊</text> <text>查看详情  ></text>
+	</navigator>
+</view>
