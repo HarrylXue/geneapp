@@ -2,18 +2,19 @@
 <view class="container">
 
     <view>this is test page</view>
-    <navigator url="../test/test" open-type="navigate" class="test-text">
-        <text>报告编号：</text>
-		<text>报告类别：</text>
+    <!-- 报告编号、报告类别 -->
+    <navigator class="report" open-type="navigateTo" url="../test/test">
+        <view class="report-text ZHIHUI_ID-text">
+            <text class="ZHIHUI_ID-label">报告编号：</text>
+            <text class="ZHIHUI_ID" >{{ZHIHUI_id}}</text>
+        </view>
+        <view class="report-text ZHIHUI_category-text">
+            <text class="ZHIHUI_category-label">报告类别：</text>
+            <text class="ZHIHUI_category" >智慧基因书</text>
+        </view>
     </navigator>
 
-	<navigator>
-		<image></image>
-		<text>最新研究成果</text> <text>更新状态</text>
-	</navigator>
+	<view class="report-details">
 
-	<text>健康福利</text>
-	<navigator>
-		<text>专家咨询门诊</text> <text>查看详情  ></text>
-	</navigator>
+	</view>	
 </view>

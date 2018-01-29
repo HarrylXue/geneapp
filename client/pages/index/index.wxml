@@ -3,28 +3,61 @@
 
     <!-- 用户登录测试 -->
     <view class="userinfo" bindtap="login">
-        <image
-            class="userinfo-avatar"
-            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
-            background-size="cover"
-        ></image>
+        <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
         <view>
             <text class="userinfo-nickname">{{logged ? userInfo.nickName : ''}}</text>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
         </view>
     </view>
 
-	<!-- 报告编号、报告类别 -->
-	<view class="report">
-		<text class="ZHIHUI_ID" wx:if="{{logged}}">{{  }}</text>
-		<text class="ZHIHUI_category" wx:if="{{logged}}"></text>
-	</view>
+    <!-- 报告编号、报告类别 -->
+    <navigator class="report" open-type="navigateTo" url="../test/test?ZHIHUI_id={{ZHIHUI_id}}">
+        <view class="report-text ZHIHUI_ID-text">
+            <text class="ZHIHUI_ID-label">报告编号：</text>
+            <text class="ZHIHUI_ID" wx:if="{{logged}}">{{ZHIHUI_id}}</text>
+        </view>
+        <view class="report-text ZHIHUI_category-text">
+            <text class="ZHIHUI_category-label">报告类别：</text>
+            <text class="ZHIHUI_category" wx:if="{{logged}}">智慧基因书</text>
+        </view>
+		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>
+    </navigator>
+
+    <!-- 最新研究成果 -->
+    <navigator class="reports-lasted" open-type="navigateTo" url="../reports-lasted/reports-lasted">
+        <!-- <image></image> -->
+        <text class="reports">最新研究成果</text>
+        <text class="reports-status" wx:if="{{logged}}">已更新</text>
+		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>	
+    </navigator>
+
+	<!-- 健康福利 -->
+	<navigator class="health">
+		<text>健康福利</text>
+		<view class="health-bg">
+				
+		</view>
+	</navigator>
+
+	<navigator class="quick-photo">
+		<text>健康快照</text>
+		<!-- 基因书总结 -->
+		<navigator class="sum">
+
+		</navigator>
+
+		<!-- 个人健康总结 -->
+		<navigator class="tasks">
+		
+		</navigator>
+	</navigator>	
+
 
     <!-- 信道连接测试 -->
     <view class="tunnel">
         <view class="tunnel-text uploader-text">
             <text bindtap="doRequest">请求（是否带有登陆态）</text>
-            <switch class="tunnel-switch" bindchange="switchRequestMode" color="#007AFF"/>
+            <switch class="tunnel-switch" bindchange="switchRequestMode" color="#007AFF" />
         </view>
         <view class="tunnel-text" wx:if="{{requestResult}}">
             <text class="request-text">{{'请求结果：' + requestResult}}</text>
@@ -37,12 +70,7 @@
             <text>上传图片</text>
         </view>
         <view class="uploader-container" wx:if="{{imgUrl}}">
-            <image
-                class="uploader-image"
-                src="{{imgUrl}}"
-                mode="aspectFit"
-                bindtap="previewImg"
-            ></image>
+            <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
         </view>
     </view>
 
@@ -50,7 +78,7 @@
     <view class="tunnel">
         <view class="tunnel-text">
             <text>信道</text>
-            <switch class="tunnel-switch" bindchange="switchChange" color="#007AFF"/>
+            <switch class="tunnel-switch" bindchange="switchChange" color="#007AFF" />
         </view>
         <view class="tunnel-text {{ tunnelStatus && tunnelStatus === 'connected' ? 'active' : 'disable' }}" bindtap="sendMessage">
             <text>发送消息</text>
@@ -64,9 +92,5 @@
         </navigator>
     </view>
 
-	<view class="test">
-		<navigator url="../test/test" open-type="navigate" class="test-text">
-			<text>test</text>
-		</navigator>
-	</view>
+
 </view>

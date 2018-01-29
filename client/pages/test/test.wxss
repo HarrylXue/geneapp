@@ -6,3 +6,11 @@ page {
     justify-content: flex-start;
 }
 
+.report{
+	width: 100%;
+	height: auto;
+    padding: 0 0 0 40rpx;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}

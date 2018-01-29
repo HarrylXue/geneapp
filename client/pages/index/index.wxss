@@ -6,7 +6,7 @@ page {
     justify-content: flex-start;
 }
 
-.userinfo, .uploader, .tunnel , .test{
+.userinfo, .uploader, .tunnel, .test, .report, .reports-lasted{
     margin-top: 40rpx;
     height: 140rpx;
     width: 100%;
@@ -20,11 +20,11 @@ page {
     transition: all 300ms ease;
 }
 
+
 .userinfo {
     margin-top: 0;
     background: #4C5364;
     height: 120rpx;
-    text-align: right;
 }
 
 .userinfo-avatar {
@@ -40,7 +40,63 @@ page {
     color: #FFF;
 }
 
-.uploader, .tunnel ,.test{
+.ZHIHUI_ID-label, .ZHIHUI_category-label{
+	color: #808080;
+	line-height: 36px;
+}
+
+.ZHIHUI_ID, .ZHIHUI_category{	
+	line-height: 36px;
+	text-align: center;
+}
+
+
+.reports-lasted{
+	margin-top: -1rpx;
+    padding: 0 0 0 40rpx;
+    flex-direction: row;
+    align-items: center;
+	justify-content: space-between;
+    box-sizing: border-box;
+	position: relative;
+	height: 74px;
+}
+
+.reports-status{
+	display: inline-block;
+	/* border: 1px solid black; */
+	background:#EF3E5A;
+	color: white;
+	border-radius: 12rpx;
+	 padding: 8rpx 16rpx; 
+	font-size: 34rpx;
+	margin-right: 100rpx;
+}
+
+.report-text{
+	position: relative;
+	color: #222;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start; 
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.report{
+	position: relative;
+}
+
+.more{
+	position: absolute;
+	right: 20rpx;
+	top: 42rpx;
+	width: 32px;
+	height: 32px;
+}
+
+.uploader, .tunnel, .test, .report, .health{
     height: auto;
     padding: 0 0 0 40rpx;
     flex-direction: column;
@@ -48,11 +104,11 @@ page {
     box-sizing: border-box;
 }
 
-.uploader-text, .tunnel-text ,.test-text{
+.uploader-text, .tunnel-text, .test-text, .report-text{
     width: 100%;
     line-height: 52px;
     font-size: 34rpx;
-    color: #007AFF;
+    /* color: #007AFF; */
 }
 
 .uploader-container {
@@ -71,22 +127,22 @@ page {
     height: 360rpx;
 }
 
-.tunnel {
+.tunnel, .report, .reports-lasted{
     padding: 0 0 0 40rpx;
 }
 
-.tunnel-text {
+.tunnel-text{
     position: relative;
     color: #222;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     box-sizing: border-box;
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.tunnel-text:first-child {
+.tunnel-text:first-child, .report-text{
     border-top: none;
 }
 

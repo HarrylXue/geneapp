@@ -21,7 +21,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'cAuth',
-        pass: 'wx215eb6b87af9d334',
+        pass: 'xinque2018',
         char: 'utf8mb4'
     },
 
@@ -35,7 +35,7 @@ const CONF = {
          * 新加坡：sg
          * @see https://www.qcloud.com/document/product/436/6224
          */
-        region: 'cn-south',
+        region: 'cn-east',
         // Bucket 名称
         fileBucket: 'qcloudtest',
         // 文件夹

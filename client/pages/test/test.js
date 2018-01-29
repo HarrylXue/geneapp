@@ -1,23 +1,16 @@
 // pages/test/test.js
-Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+var util = require('../../utils/util.js')
 
-  },
+Page({
 
   /**
-   * 组件的初始数据
+   * 页面的初始数据
    */
   data: {
-
+	ZHIHUI_id:''
   },
 
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
-  }
+  
 })

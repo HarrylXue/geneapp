@@ -8,7 +8,8 @@ Page({
 		userInfo: {},
 		logged: false,
 		takeSession: false,
-		requestResult: ''
+		requestResult: '',
+		ZHIHUI_id:''
 	},
 
 	// 用户登录示例
@@ -25,8 +26,10 @@ Page({
 					util.showSuccess('登录成功')
 					that.setData({
 						userInfo: result,
+						ZHIHUI_id: '0101999999103090299',	
 						logged: true
 					})
+					// console.log(dataList)
 				} else {
 					// 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
 					qcloud.request({
@@ -36,6 +39,7 @@ Page({
 							util.showSuccess('登录成功')
 							that.setData({
 								userInfo: result.data.data,
+								ZHIHUI_id: '0101999999103090299',
 								logged: true
 							})
 						},
