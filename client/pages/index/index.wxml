@@ -11,7 +11,7 @@
     </view>
 
     <!-- 报告编号、报告类别 -->
-    <navigator class="report" open-type="navigateTo" url="../test/test?ZHIHUI_id={{ZHIHUI_id}}">
+    <view class="report" open-type="navigateTo" url="../test/test?ZHIHUI_id={{ZHIHUI_id}}">
         <view class="report-text ZHIHUI_ID-text">
             <text class="ZHIHUI_ID-label">报告编号：</text>
             <text class="ZHIHUI_ID" wx:if="{{logged}}">{{ZHIHUI_id}}</text>
@@ -21,36 +21,41 @@
             <text class="ZHIHUI_category" wx:if="{{logged}}">智慧基因书</text>
         </view>
 		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>
-    </navigator>
+    </view>
 
     <!-- 最新研究成果 -->
-    <navigator class="reports-lasted" open-type="navigateTo" url="../reports-lasted/reports-lasted">
+    <view class="reports-lasted" open-type="navigateTo" url="../reports-lasted/reports-lasted">
         <!-- <image></image> -->
         <text class="reports">最新研究成果</text>
         <text class="reports-status" wx:if="{{logged}}">已更新</text>
 		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>	
-    </navigator>
+    </view>
 
 	<!-- 健康福利 -->
-	<navigator class="health">
-		<text>健康福利</text>
+	<view class="health">
+		<text class="health-text">健康福利</text>
 		<view class="health-bg">
-				
+			<view class='health'>
+                    <text>健康咨询</text>
+            </view>
+            <view class='health'>
+                    <text>详情></text>
+            </view>
 		</view>
-	</navigator>
+	</view>
 
-	<navigator class="quick-photo">
+	<view class="quick-photo">
 		<text>健康快照</text>
 		<!-- 基因书总结 -->
-		<navigator class="sum">
-
-		</navigator>
-
+		<view class="sum">
+            未上传
+		</view>
+        
 		<!-- 个人健康总结 -->
-		<navigator class="tasks">
-		
-		</navigator>
-	</navigator>	
+		<view class="tasks">
+            未上传
+		</view>
+	</view>	
 
 
     <!-- 信道连接测试 -->

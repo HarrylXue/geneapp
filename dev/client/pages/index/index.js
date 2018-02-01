@@ -245,4 +245,18 @@ Page({
 		this.setData({ tunnelStatus: 'closed' })
 	},
 
+	// touch事件
+	onTouch:function (event){
+		console.log(event.currentTarget.id)
+		try {
+			wx.setStorageSync('checkin', event.currentTarget.id);
+		} catch (e) {
+		}
+		
+	},
+
+	onTouchReports:function (event) {
+		console.log(event.currentTarget.id)
+	}
+
 })

@@ -1,17 +1,18 @@
 /**index.wxss**/
+
 page {
-    background: #F6F6F6;
+    background: #f6f6f6;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.userinfo, .uploader, .tunnel, .test, .report, .reports-lasted{
+.userinfo, .uploader, .tunnel, .test, .report, .reports-lasted {
     margin-top: 40rpx;
     height: 140rpx;
     width: 100%;
-    background: #FFF;
-    border: 1px solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-left: none;
     border-right: none;
     display: flex;
@@ -20,10 +21,9 @@ page {
     transition: all 300ms ease;
 }
 
-
 .userinfo {
     margin-top: 0;
-    background: #4C5364;
+    background: #4c5364;
     height: 120rpx;
 }
 
@@ -32,82 +32,81 @@ page {
     height: 100rpx;
     margin: 20rpx;
     border-radius: 50%;
-  
 }
 
 .userinfo-nickname {
     font-size: 32rpx;
-    color: #FFF;
+    color: #fff;
 }
 
-.ZHIHUI_ID-label, .ZHIHUI_category-label{
-	color: #808080;
-	line-height: 36px;
+.ZHIHUI_ID-label, .ZHIHUI_category-label {
+    color: #808080;
+    line-height: 36px;
 }
 
-.ZHIHUI_ID, .ZHIHUI_category{	
-	line-height: 36px;
-	text-align: center;
+.ZHIHUI_ID, .ZHIHUI_category {
+    line-height: 36px;
+    text-align: center;
 }
 
-.reports{
-	margin-left: 60rpx;
+.reports {
+    margin-left: 60rpx;
 }
 
-.reports-lasted{
-	margin-top: -1rpx;
+.reports-lasted {
+    margin-top: -1rpx;
     padding: 0 0 0 40rpx;
     flex-direction: row;
     align-items: center;
-	justify-content: space-between;
+    justify-content: space-between;
     box-sizing: border-box;
-	position: relative;
-	height: 74px;
+    position: relative;
+    height: 74px;
 }
 
-.reports-status{
-	display: inline-block;
-	/* border: 1px solid black; */
-	background:#EF3E5A;
-	color: white;
-	border-radius: 12rpx;
-	 padding: 8rpx 16rpx; 
-	font-size: 34rpx;
-	margin-right: 100rpx;
+.reports-status {
+    display: inline-block;
+    /* border: 1px solid black; */
+    background: #ef3e5a;
+    color: white;
+    border-radius: 12rpx;
+    padding: 8rpx 16rpx;
+    font-size: 34rpx;
+    margin-right: 100rpx;
 }
 
-.report-text{
-	position: relative;
-	color: #222;
+.report-text {
+    position: relative;
+    color: #222;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.report{
-	position: relative;
+.report {
+    position: relative;
 }
 
-.more{
-	position: absolute;
-	right: 20rpx;
-	top: 42rpx;
-	width: 32px;
-	height: 32px;
+.more {
+    position: absolute;
+    right: 20rpx;
+    top: 42rpx;
+    width: 32px;
+    height: 32px;
 }
 
-.news{
-	position: absolute;
-	left: 20rpx;
-	top: 42rpx;
-	width: 32px;
-	height: 32px;
+.news {
+    position: absolute;
+    left: 20rpx;
+    top: 42rpx;
+    width: 32px;
+    height: 32px;
 }
 
-.uploader, .tunnel, .test, .report, .health{
+.uploader, .tunnel, .test, .report, .health {
     height: auto;
     padding: 0 0 0 40rpx;
     flex-direction: column;
@@ -115,7 +114,7 @@ page {
     box-sizing: border-box;
 }
 
-.uploader-text, .tunnel-text, .test-text, .report-text{
+.uploader-text, .tunnel-text, .test-text, .report-text {
     width: 100%;
     line-height: 52px;
     font-size: 34rpx;
@@ -130,7 +129,7 @@ page {
     align-content: center;
     justify-content: center;
     box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .uploader-image {
@@ -138,22 +137,22 @@ page {
     height: 360rpx;
 }
 
-.tunnel, .report, .reports-lasted{
+.tunnel, .report, .reports-lasted {
     padding: 0 0 0 40rpx;
 }
 
-.tunnel-text{
+.tunnel-text {
     position: relative;
     color: #222;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.tunnel-text:first-child, .report-text{
+.tunnel-text:first-child, .report-text {
     border-top: none;
 }
 
@@ -174,8 +173,8 @@ page {
     width: 140rpx;
     height: 140rpx;
     border-radius: 50%;
-    background: linear-gradient(#007AFF, #0063ce);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    background: linear-gradient(#007aff, #0063ce);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -196,4 +195,13 @@ page {
     font-size: 24rpx;
     line-height: 36rpx;
     word-break: break-all;
+}
+
+.health-welfare-title, .quick-photo-title {
+    color: #9e9e9e;
+}
+
+.js_category{
+	background-color: #fff;
+    border: 1px solid #fff;
 }

@@ -11,7 +11,7 @@
     </view>
 
     <!-- 报告编号、报告类别 -->
-    <navigator class="report" open-type="navigateTo" url="../test/test?ZHIHUI_id={{ZHIHUI_id}}">
+    <navigator class="report" open-type="navigateTo" url="../reports/reports" catchtap='onTouchReports' id='{{ZHIHUI_id}}'>
         <view class="report-text ZHIHUI_ID-text">
             <text class="ZHIHUI_ID-label">报告编号：</text>
             <text class="ZHIHUI_ID" wx:if="{{logged}}">{{ZHIHUI_id}}</text>
@@ -20,39 +20,46 @@
             <text class="ZHIHUI_category-label">报告类别：</text>
             <text class="ZHIHUI_category" wx:if="{{logged}}">智慧基因书</text>
         </view>
-		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>
+        <image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>
     </navigator>
 
     <!-- 最新研究成果 -->
-    <navigator class="reports-lasted" open-type="navigateTo" url="../reports-lasted/reports-lasted">
+    <navigator class="reports-lasted" open-type="navigateTo" url="../reports-lasted/reports-lasted" catchtap='onTouch' id='{{ZHIHUI_id}}'>
         <text class="reports">最新研究成果</text>
         <text class="reports-status" wx:if="{{logged}}">已更新</text>
-		<image class="news" src='./image/laba.png' backgroung-size="cover"></image>
-		<image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>	
+        <image class="news" src='./image/laba.png' backgroung-size="cover"></image>
+        <image class="more more-blue" src="./more-blue.png" backgroung-size="cover"></image>
     </navigator>
 
-	<!-- 健康福利 -->
-	<navigator class="health">
-		<text>健康福利</text>
-		<view class="health-bg">
-              <text class='text-center'>专家咨询</text> 
-              <text class='text-right'>详情></text>           
-		</view>
-	</navigator> 
+    <!-- 健康福利 -->
+    <navigator class="health-welfare" open-type='navigateTo' url='../Health-Welfare/Health-Welfare'>
+        <text class='health-welfare-title'>健康福利</text>
+        <view class="health-bg weui-flex js_category kind-list__item-hd">
+            <text class='text-center'>专家咨询</text>
+            <text class='text-right'>查看详情></text>
+        </view>
+    </navigator>
 
-	<navigator class="quick-photo">
-		<text>健康快照</text>
-		<!-- 基因书总结 -->
-		<navigator class="sum">
-               <text wx:if="{{isUpload}}">未上传</text> 
-		</navigator>
+	<!-- 健康快照 -->
+    <view class="quick-photo">
+        <text class='quick-photo-title'>健康快照</text>
+        <!-- 基因书总结 -->
+        <navigator class="sum weui-flex js_category kind-list__item-hd">
+			<text>基因书总结</text>
+            <text wx:if="{{isUpload}}">未上传</text>
+        </navigator>
 
-		<!-- 个人健康总结 -->
-		<navigator class="tasks">
-               <text wx:if="{{isUpload}}">未上传</text>  
-		</navigator>
-	</navigator>	
+        <!-- 个人健康总结 -->
+        <navigator class="tasks weui-flex js_category kind-list__item-hd">
+			<text>个人健康总结</text>
+            <text wx:if="{{isUpload}}">未上传</text>
+        </navigator>
+    </view>
 
+	<!-- 详细内容 -->
+	<navigator class='more-details'>
+
+	</navigator>
 
     <!-- 信道连接测试 -->
     <view class="tunnel">
@@ -66,14 +73,14 @@
     </view>
 
     <!-- 上传图片测试 -->
-    <view class="uploader">
+    <!-- <view class="uploader">
         <view class="uploader-text" bindtap="doUpload">
             <text>上传图片</text>
         </view>
         <view class="uploader-container" wx:if="{{imgUrl}}">
             <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
         </view>
-    </view>
+    </view> -->
 
     <!-- 信道连接测试 -->
     <view class="tunnel">

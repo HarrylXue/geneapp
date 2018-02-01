@@ -1,0 +1,28 @@
+<!--pages/test/test.wxml-->
+<view class="page">
+
+    <view>this is reports page</view>
+    <!-- 报告编号、报告类别 -->
+    <view class="report">
+        <view class="report-text ZHIHUI_ID-text">
+            <text class="ZHIHUI_ID-label">报告编号：</text>
+            <text class="ZHIHUI_ID" >{{ZHIHUI_id}}</text>
+        </view>
+        <view class="report-text ZHIHUI_category-text">
+            <text class="ZHIHUI_category-label">报告类别：</text>
+            <text class="ZHIHUI_category" >智慧基因书</text>
+        </view>
+    </view>
+
+	<view class="report-details">
+		<text>	流程步骤   	  状态   	完成时期</text>
+		<text>  1样本采集     完成	2016-10-23</text>
+		<text>  2质量检查	  完成	2016-10-23</text>
+		<text>  3样本检测     完成	2016-10-23</text>
+		<text>  4数据分析     完成	2016-10-23</text>
+		<text>  5报告完成	  完成	2016-10-23</text>		
+	</view>	
+
+</view>
+
+	
